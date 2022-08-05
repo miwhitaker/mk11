@@ -1,0 +1,12 @@
+<p>home component loaded</p>
+<div class = "fighter-table">
+    <table>
+        <button type="button" 
+            class="character-button" 
+            (click) = "chooseYourFighter(fighter)"
+            [value] = "fighter"
+            *ngFor="let fighter of fighters">
+            {{fighter}}
+        </button>
+    </table>
+</div>
