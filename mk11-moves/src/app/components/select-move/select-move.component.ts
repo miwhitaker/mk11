@@ -11,15 +11,25 @@ export class SelectMoveComponent implements OnInit {
 
   constructor(public router: Router, public route: ActivatedRoute) { }
 
-  fighters: String[] = ['baraka', 'cassie cage', 'cetrion', 'dvorrah','erron black', 'geres', 'jacqui briggs', 'jade', 'jax briggs', 'johnny cage', 'kabal', 'kano', 'kitana', 'kollector', 'kotal kahn', 'kung lao', 'liu kang', 'noob saibot', 'raiden', 'scorpion', 'skarlet', 'sonya', 'sub-zero']
+  currentCharacter:any;
+  fList:any;
 
-  ngOnInit(): void {}
-    currentCharacter  = this.fighters.find(this.route.snapshot.params.toString);
-    fList = this.getFatalityList(this.currentCharacter);
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(
+        params => {
+          this.currentCharacter = params.char;
+          console.log(this.currentCharacter);
+        })
+        this.fList = this.getFatalityList(this.currentCharacter);
+  }
 
     goToDirectionPage(num:number) {
-      console.log("keep firing, assholes");
-      this.router.navigate([""]);
+      this.router.navigate(["/fatality/"],
+         {queryParams: {char:this.currentCharacter, fat:num}});
+    }
+
+    goBack() {
+        this.router.navigate(["/home"]);
     }
 
     getFatalityList(char:any) {

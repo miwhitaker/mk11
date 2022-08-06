@@ -1,14 +1,16 @@
-<p>select-move works!</p>
-<div class="select-move-table">
-    <h1>{{currentCharacter}}'s Fatalities</h1>
-    <button type="button"
-        (click)="goToDirectionPage(0)"
-        value="0">
-        {{this.fList[0]}}
-    </button>
-    <button type="button"
-        (click)="goToDirectionPage(1)"
-        value="1">
-        {{this.fList[3]}}
-    </button>
+<div class="select-page">
+    <div class="select-move-table">
+        <h1>{{currentCharacter}}'s Fatalities</h1>
+        <button type="button"
+            (click)="goToDirectionPage(0)"
+            value="0">
+            {{this.fList[0]}}
+        </button>
+        <button type="button"
+            (click)="goToDirectionPage(1)"
+            value="1">
+            {{this.fList[3]}}
+        </button>
+    </div>
+    <button class="go-back-button" type="button" (click)="goBack()">Go Back</button>
 </div>

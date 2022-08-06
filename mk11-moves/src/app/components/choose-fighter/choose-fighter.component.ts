@@ -19,7 +19,8 @@ export class ChooseFighterComponent implements OnInit {
   }
 
   chooseYourFighter(character: any) {
-    this.router.navigate(['/select/' + `${character}`]);
+    this.router.navigate(['/select'],
+    {queryParams: {char:character}})
   }
 
 }

@@ -6,10 +6,11 @@ import { FatalityComponent } from './components/fatality/fatality.component';
 import { SelectMoveComponent } from './components/select-move/select-move.component';
 
 const routes: Routes = [
-  {path: '', component: ChooseFighterComponent},
-  {path: 'select/:char', component: SelectMoveComponent},
+  {path: 'home', component: ChooseFighterComponent},
+  {path: 'select', component: SelectMoveComponent},
   {path: 'facing', component: DirectionComponent},
   {path: 'fatality', component: FatalityComponent},
+  {path: '**', redirectTo:'home'}
 ];
 
 @NgModule({

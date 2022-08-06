@@ -1,1 +1,17 @@
-<p>fatality works!</p>
+<div class="fatality-page">
+    <div class="direction" *ngIf="showFatality===false">
+        <h1>Which direction are you facing?</h1>
+        <div class="direction-buttons-div">
+            <button type="button" (click)="facingLeft()">LEFT</button>
+            <button type="button" (click)="facingRight()">RIGHT</button>
+        </div>
+    </div>
+    <div class="show-move">
+        <h1>{{fatalityName}}</h1>
+        <div class="distance-div">{{fatalityDistance}}</div>
+        <div id="input-moves"></div>
+    </div>
+    <div class="back-button">
+        <button type="button" (click)="goBack()">Go back</button>
+    </div>
+</div>
