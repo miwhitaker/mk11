@@ -1,12 +1,16 @@
-<p>home component loaded</p>
-<div class = "fighter-table">
-    <table>
-        <button type="button" 
-            class="character-button" 
-            (click) = "chooseYourFighter(fighter)"
-            [value] = "fighter"
-            *ngFor="let fighter of fighters">
-            {{fighter}}
-        </button>
-    </table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Choose your fighter</h1>
+        </div>
+    </div>
+    <div class="row">
+        <hr />
+        <div id="fighter-span" class="col-12">
+            <button *ngFor="let fighter of fighters" type="button" class="btn btn-light character-button"
+                (click)="chooseYourFighter(fighter)" [value]="fighter">
+                {{fighter}}
+            </button>
+        </div>
+    </div>
 </div>

@@ -40,7 +40,7 @@ export class SelectMoveComponent implements OnInit {
                 '', [], ''
             ]
         case 'cassie cage':
-            return [ 
+            return [
                   'i <3 u',
                   ['d', 'd', 'f', 2],
                   'mid'
@@ -49,9 +49,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'cetrion':
-            return [ 
+            return [
                   'maintaining balance',
                   ['b', 'd', 'f', 'd', 2],
                   'mid'
@@ -60,9 +60,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'dvorrah':
-            return [ 
+            return [
                   'new species',
                   ['b', 'f', 'b', 1],
                   'close'
@@ -71,9 +71,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'erron black':
-            return [ 
+            return [
                   'melted',
                   ['d', 'd', 'd', 3],
                   'mid'
@@ -82,9 +82,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'geres':
-            return [ 
+            return [
                   'phasing through time',
                   ['b', 'd', 'd', 1],
                   'any'
@@ -93,9 +93,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'jacqui briggs':
-            return [ 
+            return [
                   'spider mines',
                   ['f', 'b', 'f', 1],
                   'mid'
@@ -104,9 +104,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'jade':
-            return [ 
+            return [
                   'bow before me',
                   ['d', 'd', 'f', 'd', 2],
                   'any'
@@ -115,9 +115,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'jax briggs':
-            return [ 
+            return [
                   'coming in hot',
                   ['f', 'd', 'f', 1],
                   'close'
@@ -126,20 +126,20 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'johnny cage':
-            return [ 
+            return [
                   "mr cage's neighborhood",
                   ['f', 'b', 'd', 'd', 2],
                   ''
               ,
-                  '',
+                  'poop',
                   [],
                   ''
               ]
-          
+
         case 'kabal':
-            return [ 
+            return [
                   'road rash',
                   ['b', 'f', 'd', 'f', 1],
                   'mid'
@@ -148,9 +148,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'kano':
-            return [ 
+            return [
                   'last dance',
                   ['f', 'd', 'd', 3],
                   'close'
@@ -159,9 +159,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'kitana':
-            return [ 
+            return [
                   'gore-nado',
                   ['d','d','d','d',3],
                   ''
@@ -170,9 +170,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'kollector':
-            return [ 
+            return [
                   'for the kollection',
                   ['d','d','d','d',2],
                   'close'
@@ -181,9 +181,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'kotal kahn':
-            return [ 
+            return [
                   'totem sacrifice',
                   ['b','d','b',1],
                   'close'
@@ -192,9 +192,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'kung lao':
-            return [ 
+            return [
                   'headed nowhere',
                   ['d','f','b','d',4],
                   'close'
@@ -203,9 +203,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'liu kang':
-            return [ 
+            return [
                   'burn out',
                   ['d','b','d','f',3],
                   'close'
@@ -214,9 +214,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'noob saibot':
-            return [ 
+            return [
                   'split decision',
                   ['b','f','b','f',2],
                   'mid'
@@ -225,9 +225,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'raiden':
-            return [ 
+            return [
                   'alternating current',
                   ['b','d','b',3],
                   'mid'
@@ -236,9 +236,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'scorpion':
-            return [ 
+            return [
                   "you're next",
                   ['b','d','d',3],
                   'far'
@@ -247,9 +247,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'skarlet':
-            return [ 
+            return [
                   'bloody mess',
                   ['f','b','d',1],
                   'mid'
@@ -258,9 +258,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'sonya':
-            return [ 
+            return [
                   'to the choppa',
                   ['d','f','b',4],
                   'mid'
@@ -269,9 +269,9 @@ export class SelectMoveComponent implements OnInit {
                   [],
                   ''
               ]
-          
+
         case 'sub-zero':
-            return [ 
+            return [
                   'ice-cutioner',
                   ['b','f','b',4],
                   'mid'

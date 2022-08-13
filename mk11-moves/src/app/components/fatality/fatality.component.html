@@ -1,17 +1,27 @@
-<div class="fatality-page">
-    <div class="direction" *ngIf="showFatality===false">
-        <h1>Which direction are you facing?</h1>
-        <div class="direction-buttons-div">
-            <button type="button" (click)="facingLeft()">LEFT</button>
-            <button type="button" (click)="facingRight()">RIGHT</button>
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="text-align: center">
+            <h1 *ngIf="showFatality===false">Which direction are you facing?</h1>
+            <h1 *ngIf="showFatality===true">Fatality</h1>
         </div>
     </div>
-    <div class="show-move">
-        <h1>{{fatalityName}}</h1>
-        <div class="distance-div">{{fatalityDistance}}</div>
-        <div id="input-moves"></div>
-    </div>
-    <div class="back-button">
-        <button type="button" (click)="goBack()">Go back</button>
+    <div class="row fatality-page">
+        <div class="col-12">
+            <div class="direction" *ngIf="showFatality===false">
+                <div id="direction-buttons-div">
+                    <button type="button" class="btn btn-light" (click)="facingLeft()">LEFT</button>
+                    <button type="button" class="btn btn-light" (click)="facingRight()">RIGHT</button>
+                </div>
+            </div>
+            <br />
+            <div class="show-move" *ngIf="showFatality===true">
+                <h1>{{fatalityName}}</h1>
+                <div class="distance-div"><strong>Range:</strong> {{fatalityDistance}}</div>
+            </div>
+            <div id="input-moves"></div>
+            <div id="back-button">
+                <button type="button" class="btn btn-primary" (click)="goBack()">Start Over</button>
+            </div>
+        </div>
     </div>
 </div>
