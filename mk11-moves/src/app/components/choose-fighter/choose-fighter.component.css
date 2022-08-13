@@ -5,6 +5,10 @@
 }
 
 .character-button {
-    width: 100px;
-    margin: 10px;
+    margin-top: 5px;
+}
+
+#fighter-span {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,22 @@
+#direction-buttons-div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn-light {
+    margin-top: 5px;
+
+}
+
+#input-moves {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#back-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
