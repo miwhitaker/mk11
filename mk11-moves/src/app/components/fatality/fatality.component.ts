@@ -35,31 +35,26 @@ export class FatalityComponent implements OnInit {
   facingLeft() {
     console.log("facing left");
     console.log(this.selectedMove)
-    if(this.selectedMove == 0) {
-        console.log('inside the if block')
-        this.fatalityName = this.fList[0];
-        const flippedDirection = this.fList[1];
-        console.log("original: " + flippedDirection)
-        this.fatalityDistance = this.fList[2];
-        let modDirection = [];
-        for(let item in flippedDirection) {
-            let keyPress = flippedDirection[item]
-            if(keyPress === 'f') {
-                modDirection.push('b');
-            }
-            else if(keyPress === 'b') {
-                modDirection.push('f');
-            }
-            else {
-                modDirection.push(keyPress);
-            }
+    
+    this.fatalityName = this.fList[3 * this.selectedMove];
+    const flippedDirection = this.fList[3 * this.selectedMove + 1];
+    console.log("original: " + flippedDirection)
+    this.fatalityDistance = this.fList[3 * this.selectedMove + 2];
+    let modDirection = [];
+    for(let item in flippedDirection) {
+        let keyPress = flippedDirection[item]
+        if(keyPress === 'f') {
+            modDirection.push('b');
         }
+        else if(keyPress === 'b') {
+            modDirection.push('f');
+        }
+        else {
+            modDirection.push(keyPress);
+        }
+    
         this.fatalityInput = modDirection;
         console.log("modified: " + modDirection)
-    }
-    else{
-        this.fatalityInput = this.fList[3 * this.selectedMove + 1]
-        this.fatalityDistance = this.fList[3 * this.selectedMove + 2]
     }
     this.showFatality = true;
     this.displayMoves();
@@ -67,18 +62,9 @@ export class FatalityComponent implements OnInit {
 
   facingRight() {
     console.log("facing right");
-    if(this.selectedMove === 0) {
-        this.fatalityName = this.fList[0];
-        this.fatalityInput = this.fList[1]
-        this.fatalityDistance = this.fList[2]
-    }
-    else{
-        this.fatalityName = this.fList[3 * this.selectedMove];
-        this.fatalityInput = this.fList[3 * this.selectedMove + 1]
-        this.fatalityDistance = this.fList[3 * this.selectedMove + 2]
-    }
-    console.log(this.fatalityInput);
-    console.log(this.fatalityDistance);
+    this.fatalityName = this.fList[3 * this.selectedMove];
+    this.fatalityInput = this.fList[3 * this.selectedMove + 1]
+    this.fatalityDistance = this.fList[3 * this.selectedMove + 2]
     this.showFatality = true;
     this.displayMoves();
   }
@@ -122,8 +108,13 @@ export class FatalityComponent implements OnInit {
     switch(char) {
       case "baraka":
           return [
-              "food for thought", ['b', 'd', 'b', 4], 'close',
-              '', [], ''
+              "food for thought", 
+              ['b', 'd', 'b', 4], 
+              'close'
+            ,
+              'rock, paper, baraka', 
+              ['b', 'f', 'b', 1], 
+              'close'
           ]
       case 'cassie cage':
           return [
@@ -131,9 +122,9 @@ export class FatalityComponent implements OnInit {
                 ['d', 'd', 'f', 2],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                '#GirlPower',
+                ['b', 'd', 'd','b', 4],
+                'mid'
             ]
 
       case 'cetrion':
@@ -142,9 +133,9 @@ export class FatalityComponent implements OnInit {
                 ['b', 'd', 'f', 'd', 2],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'good and evil',
+                ['b','d', 'b', 1],
+                'mid'
             ]
 
       case 'dvorrah':
@@ -153,9 +144,9 @@ export class FatalityComponent implements OnInit {
                 ['b', 'f', 'b', 1],
                 'close'
             ,
-                '',
-                [],
-                ''
+                "can't die",
+                ['b', 'd', 'd', 2],
+                'mid'
             ]
 
       case 'erron black':
@@ -164,10 +155,21 @@ export class FatalityComponent implements OnInit {
                 ['d', 'd', 'd', 3],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'death trap',
+                ['d', 'f', 'd', 4],
+                'mid'
             ]
+            
+      case 'frost':
+        return [
+              'ice sculpture',
+              ['f', 'b', 'd', 1],
+              'close'
+          ,
+              'the cyber initiative',
+              ['b', 'f', 'd', 'f', 2],
+              'mid'
+          ]
 
       case 'geres':
           return [
@@ -175,9 +177,9 @@ export class FatalityComponent implements OnInit {
                 ['b', 'd', 'd', 1],
                 'any'
             ,
-                '',
-                [],
-                ''
+                'peeling back',
+                ['d', 'f', 'b', 3],
+                'close'
             ]
 
       case 'jacqui briggs':
@@ -186,9 +188,9 @@ export class FatalityComponent implements OnInit {
                 ['f', 'b', 'f', 1],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                "nothin' but neck",
+                ['b', 'f', 'b', 2],
+                'mid'
             ]
 
       case 'jade':
@@ -197,9 +199,9 @@ export class FatalityComponent implements OnInit {
                 ['d', 'd', 'f', 'd', 2],
                 'any'
             ,
-                '',
-                [],
-                ''
+                'pole dance',
+                ['b', 'f', 'd', 'f', 3],
+                'close'
             ]
 
       case 'jax briggs':
@@ -208,20 +210,20 @@ export class FatalityComponent implements OnInit {
                 ['f', 'd', 'f', 1],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'still got it',
+                ['b', 'f', 'b', 'd', 3],
+                'close'
             ]
 
       case 'johnny cage':
           return [
                 "mr cage's neighborhood",
                 ['f', 'b', 'd', 'd', 2],
-                ''
+                'close'
             ,
-                '',
-                [],
-                ''
+                'who hired this guy',
+                ['f', 'd', 'f', 3],
+                'close'
             ]
 
       case 'kabal':
@@ -230,9 +232,9 @@ export class FatalityComponent implements OnInit {
                 ['b', 'f', 'd', 'f', 1],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'hooked',
+                ['d', 'd', 'd', 2],
+                'close'
             ]
 
       case 'kano':
@@ -241,20 +243,20 @@ export class FatalityComponent implements OnInit {
                 ['f', 'd', 'd', 3],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'face like a dropped pie',
+                ['b', 'd', 'f', 4],
+                'close'
             ]
 
       case 'kitana':
           return [
                 'gore-nado',
-                ['d','d','d','d',3],
-                ''
+                ['d','d','d','d', 3],
+                'mid'
             ,
-                '',
-                [],
-                ''
+                'royal execution',
+                ['d', 'b', 'f', 3],
+                'mid'
             ]
 
       case 'kollector':
@@ -263,9 +265,9 @@ export class FatalityComponent implements OnInit {
                 ['d','d','d','d',2],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'head lantern',
+                ['d', 'f', 'd', 3],
+                'close'
             ]
 
       case 'kotal kahn':
@@ -274,9 +276,9 @@ export class FatalityComponent implements OnInit {
                 ['b','d','b',1],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'kat food',
+                ['b', 'f', 'b', 'f', 3],
+                'close'
             ]
 
       case 'kung lao':
@@ -285,9 +287,9 @@ export class FatalityComponent implements OnInit {
                 ['d','f','b','d',4],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'meat slicer',
+                ['d', 'f', 'd', 1],
+                'close'
             ]
 
       case 'liu kang':
@@ -296,9 +298,9 @@ export class FatalityComponent implements OnInit {
                 ['d','b','d','f',3],
                 'close'
             ,
-                '',
-                [],
-                ''
+                'belly of the beast',
+                ['b', 'd', 'b', 'f', 4],
+                'mid'
             ]
 
       case 'noob saibot':
@@ -307,9 +309,9 @@ export class FatalityComponent implements OnInit {
                 ['b','f','b','f',2],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'split decision',
+                ['d', 'd', 'd', 3],
+                '3'
             ]
 
       case 'raiden':
@@ -318,9 +320,9 @@ export class FatalityComponent implements OnInit {
                 ['b','d','b',3],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'direct current',
+                ['d', 'f', 'b', 1],
+                'close'
             ]
 
       case 'scorpion':
@@ -329,9 +331,9 @@ export class FatalityComponent implements OnInit {
                 ['b','d','d',3],
                 'far'
             ,
-                '',
-                [],
-                ''
+                'chain reaction',
+                ['d', 'f', 'b', 4],
+                'far'
             ]
 
       case 'skarlet':
@@ -340,10 +342,21 @@ export class FatalityComponent implements OnInit {
                 ['f','b','d',1],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'heart condition',
+                ['d', 'd', 'f', 2],
+                'far'
             ]
+
+        case 'shao kahn':
+            return [
+                    'back blown out',
+                    ['b', 'f', 'd', 'd', 4],
+                    'mid'
+                  ,
+                    'Kahn-Sequences',
+                    ['b', 'f', 'b', 3],
+                    'close'
+                  ]
 
       case 'sonya':
           return [
@@ -351,20 +364,20 @@ export class FatalityComponent implements OnInit {
                 ['d','f','b',4],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'supply drop',
+                ['b', 'f', 'd', 1],
+                'close'
             ]
 
       case 'sub-zero':
           return [
                 'ice-cutioner',
-                ['b','f','b',4],
+                ['b','f','b', 4],
                 'mid'
             ,
-                '',
-                [],
-                ''
+                'frozen in time',
+                ['f', 'd', 'f', 2],
+                'mid'
             ]
             default: return ''
         }

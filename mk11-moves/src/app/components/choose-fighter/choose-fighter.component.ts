@@ -11,7 +11,7 @@ export class ChooseFighterComponent implements OnInit {
 
   constructor(public router: Router, public route: ActivatedRoute) { }
 
-  fighters: String[] = ['baraka', 'cassie cage', 'cetrion', 'dvorrah','erron black', 'geres', 'jacqui briggs', 'jade', 'jax briggs', 'johnny cage', 'kabal', 'kano', 'kitana', 'kollector', 'kotal kahn', 'kung lao', 'liu kang', 'noob saibot', 'raiden', 'scorpion', 'skarlet', 'sonya', 'sub-zero']
+  fighters: string[] = ['baraka', 'cassie cage', 'cetrion', 'dvorrah','erron black', 'frost', 'geres', 'jacqui briggs', 'jade', 'jax briggs', 'johnny cage', 'kabal', 'kano', 'kitana', 'kollector', 'kotal kahn', 'kung lao', 'liu kang', 'noob saibot', 'raiden', 'scorpion', 'shao kahn', 'skarlet', 'sonya', 'sub-zero']
 
   // character: string;
 

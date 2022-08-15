@@ -9,7 +9,7 @@
         <div id="fighter-span" class="col-12">
             <button *ngFor="let fighter of fighters" type="button" class="btn btn-light character-button"
                 (click)="chooseYourFighter(fighter)" [value]="fighter">
-                {{fighter}}
+                {{fighter | titlecase}}
             </button>
         </div>
     </div>

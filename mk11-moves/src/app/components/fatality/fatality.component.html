@@ -15,8 +15,8 @@
             </div>
             <br />
             <div class="show-move" *ngIf="showFatality===true">
-                <h1>{{fatalityName}}</h1>
-                <div class="distance-div"><strong>Range:</strong> {{fatalityDistance}}</div>
+                <h1>{{fatalityName | titlecase}}</h1>
+                <div class="distance-div"><strong>Range:</strong> {{fatalityDistance }}</div>
             </div>
             <div id="input-moves"></div>
             <div id="back-button">
