@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ChooseFighterComponent } from './components/choose-fighter/choose-fighter.component';
 import { SelectMoveComponent } from './components/select-move/select-move.component';
 import { FatalityComponent } from './components/fatality/fatality.component';
+import { MoveService } from 'src/move.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FatalityComponent } from './components/fatality/fatality.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MoveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

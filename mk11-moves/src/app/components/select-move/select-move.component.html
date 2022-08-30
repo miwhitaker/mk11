@@ -3,28 +3,14 @@
         <div class="col-md-12">
             <h1>{{currentCharacter}}'s Fatalities</h1>
         </div>
-        <!-- <div class="row">
-            <div id="select-page">
-                <button type="button" (click)="goToDirectionPage(0)" value="0" class="btn btn-light">
-                    {{this.fList[0]}}
-                </button>
-                <button type="button" (click)="goToDirectionPage(1)" value="1" class="btn btn-light">
-                    {{this.fList[3]}}
-                </button>
-                <button class="go-back-button" type="button" (click)="goBack()" class="btn btn-primary">Go
-                    Back</button>
-            </div>
-        </div> -->
-
         <div class="row">
             <div id="select-page">
                 <button type="button" 
                         *ngFor="let move of allMovesForCharacter; index as i" 
-                        (click)="goToDirectionPage(i)" value="0" 
+                        (click)="goToDirectionPage(i)" value = i 
                         class="btn btn-light">
                             {{move |titlecase}}
                 </button>
-               
                 <button class="go-back-button" 
                         type="button" 
                         (click)="goBack()" 
