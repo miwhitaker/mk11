@@ -14,7 +14,6 @@ export class MoveService {
 
   getMoves(char: string)  {
     let fList = new FatalityList();
-    console.log(fList.baraka);
     return fList[char as keyof typeof fList];
   }
 }

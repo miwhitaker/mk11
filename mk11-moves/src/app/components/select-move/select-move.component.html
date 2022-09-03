@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>{{currentCharacter}}'s Fatalities</h1>
+            <h1>{{currentCharacter|titlecase}}'s Fatalities</h1>
         </div>
         <div class="row">
             <div id="select-page">
@@ -17,6 +17,14 @@
                         class="btn btn-primary">
                             Go Back
                 </button>
+                <div class="stage-instructions">
+                    <p>
+                        Stage Fatalities can only be done on:
+                    </p>
+                    <p>TOURNAMENT</p>
+                    <p>DEAD POOL</p>
+                    <p>SHAOLIN TRAP</p>
+                </div>
             </div>
         </div>
     </div>

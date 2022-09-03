@@ -25,7 +25,6 @@ export class FatalityComponent implements OnInit {
     this.route.queryParams.subscribe(
       params => {
         this.currentCharacter = params.char;
-        //will need to add in stage and friendships here with an if statement
         let moveChoice = parseInt(params.fat) + 1;
         if(moveChoice <= 2) {
             this.selectedMove = `fatality${moveChoice}`;
@@ -39,8 +38,6 @@ export class FatalityComponent implements OnInit {
         else {
             this.selectedMove = "brutality"
         }
-        
-        console.log(this.selectedMove);
       }
     );
     this.fList = this.serv.getMoves(this.currentCharacter);
@@ -75,17 +72,13 @@ export class FatalityComponent implements OnInit {
   }
 
   facingRight() {
-    console.log("facing right");
-
     this.fatalityInput = this.fList[this.selectedMove].move;
     this.showFatality = true;
     this.displayMoves();
   }
 
   displayMoves():void {
-    console.log("displaying moves");
     for(let stuff in this.fatalityInput) {
-
         const img = new Image(60, 60);
         let move = this.fatalityInput[stuff];
         let buttonPress;

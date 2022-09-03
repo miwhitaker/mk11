@@ -6,3 +6,10 @@
 .btn {
     margin-top: 5px;
 }
+
+.stage-instructions {
+    color: red;
+    text-align: center;
+    /* text-decoration: underline; */
+    margin-top: 25px;
+}

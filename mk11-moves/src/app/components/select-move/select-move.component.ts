@@ -25,6 +25,8 @@ export class SelectMoveComponent implements OnInit {
         this.fList = this.serv.getMoves(this.currentCharacter);
         this.allMovesForCharacter.push(this.fList?.fatality1.name);
         this.allMovesForCharacter.push(this.fList?.fatality2.name);
+        this.allMovesForCharacter.push('STAGE');
+        this.allMovesForCharacter.push('FRIENDSHIP: ' + this.fList?.friendship.name);
   }
 
     goToDirectionPage(num:number) {
